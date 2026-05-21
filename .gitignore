@@ -1,0 +1,33 @@
+# General
+.DS_Store
+.vscode/
+*.log
+
+# Backend (Python)
+backend/.env
+backend/__pycache__/
+backend/venv/
+backend/*.db
+backend/.pytest_cache/
+backend/instance/
+backend/src/api/v1/endpoints/__pycache__/
+backend/src/core/__pycache__/
+backend/src/services/__pycache__/
+
+# Frontend (React/Vite/JS)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+
+# New Frontend
+frontend-new/node_modules/
+frontend-new/.next/
+frontend-new/out/
+frontend-new/build/
+frontend-new/.env
+frontend-new/.env.local
+frontend-new/.env.development.local
+frontend-new/.env.test.local
+frontend-new/.env.production.local

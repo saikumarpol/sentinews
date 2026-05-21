@@ -1,0 +1,197 @@
+:root {
+  --terminal-black: #000000;
+  --terminal-green: #00FF33;
+  --terminal-red: #FF3333;
+  --terminal-amber: #FFB900;
+  --terminal-blue: #00AAFF;
+  --terminal-border: #333333;
+  --terminal-bg-item: #050505;
+}
+
+.commodities-container {
+  padding: 0.5rem;
+  max-width: 100vw;
+  background: var(--terminal-black);
+  color: #cccccc;
+  font-family: 'Roboto Mono', 'Consolas', monospace;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--terminal-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a0a;
+}
+
+.header-title h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--terminal-amber);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.last-updated {
+  font-size: 0.65rem;
+  color: #888;
+}
+
+/* Heatmap Grid - High Density */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 2px;
+  padding: 2px;
+}
+
+.heatmap-card {
+  padding: 4px 8px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #1a1a1a;
+  background: #080808;
+  min-height: 60px;
+}
+
+.heatmap-card__symbol {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: #666;
+}
+
+.heatmap-card__name {
+  font-size: 0.7rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.heatmap-card__price {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.heatmap-card__pct {
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* Bloomberg Heat Colors - High Contrast */
+.heat-plus-3 { background: #003300 !important; color: var(--terminal-green) !important; border: 1px solid var(--terminal-green) !important; }
+.heat-plus-2 { background: #002200 !important; color: var(--terminal-green) !important; }
+.heat-plus-1 { background: #001100 !important; color: #00AA22 !important; }
+.heat-neutral { background: #050505 !important; color: #666 !important; }
+.heat-minus-1 { background: #110000 !important; color: #AA2222 !important; }
+.heat-minus-2 { background: #220000 !important; color: var(--terminal-red) !important; }
+.heat-minus-3 { background: #330000 !important; color: var(--terminal-red) !important; border: 1px solid var(--terminal-red) !important; }
+
+/* Grid Item Containers */
+.grid-item-container {
+  background: var(--terminal-bg-item);
+  border: 1px solid var(--terminal-border);
+  border-radius: 0; 
+  overflow: hidden;
+}
+
+.widget-header {
+  padding: 4px 8px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+}
+
+.widget-title {
+  font-size: 0.7rem;
+  color: var(--terminal-amber);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.widget-content {
+  height: calc(100% - 24px);
+  overflow: hidden;
+}
+
+/* News Widget Terminal Style */
+.news-terminal-list {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.news-terminal-item {
+  padding: 4px 8px;
+  border-bottom: 1px solid #111;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.news-terminal-item:hover {
+  background: #111;
+}
+
+.news-impact-indicator {
+  width: 4px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.impact-high { background: var(--terminal-red); box-shadow: 0 0 5px var(--terminal-red); }
+.impact-med { background: var(--terminal-amber); }
+.impact-low { background: var(--terminal-blue); }
+
+.news-headline-terminal {
+  font-size: 0.75rem;
+  color: var(--terminal-blue);
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.news-headline-terminal:hover {
+  text-decoration: underline;
+}
+
+/* Movers List Styling */
+.movers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.7rem;
+}
+
+.movers-table th {
+  text-align: left;
+  padding: 4px 8px;
+  background: #111;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.movers-table td {
+  padding: 4px 8px;
+  border-bottom: 1px solid #111;
+}
+
+/* Recharts Customization to fit theme */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #222;
+}
+
+.recharts-text {
+  fill: #666;
+  font-size: 10px;
+}
